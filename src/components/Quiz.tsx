@@ -52,7 +52,6 @@ export default function Quiz() {
               <Question
                 question={questions[currentQuestion]}
                 onAnswer={handleAnswer}
-                questionNumber={currentQuestion + 1}
               />
             </div>
           </div>

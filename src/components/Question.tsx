@@ -3,10 +3,9 @@ import type { Question as QuestionType } from '../types';
 interface QuestionProps {
   question: QuestionType;
   onAnswer: (score: number) => void;
-  questionNumber: number;
 }
 
-export default function Question({ question, onAnswer, questionNumber }: QuestionProps) {
+export default function Question({ question, onAnswer }: QuestionProps) {
   return (
     <div className="animate-fadeIn">
       <div className="bg-gold/10 border-l-4 border-gold rounded-r-lg p-4 mb-8">
