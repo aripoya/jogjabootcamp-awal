@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { questions } from '../data/questions';
 import { getResultByScore } from '../data/results';
+import { submitQuiz } from '../services/api';
 import type { QuizStep, UserData, ResultCategory } from '../types';
+import type { Product } from '../services/api';
 import Landing from './Landing';
 import Question from './Question';
 import ProgressBar from './ProgressBar';
@@ -14,6 +16,8 @@ export default function Quiz() {
   const [score, setScore] = useState(0);
   const [userData, setUserData] = useState<UserData | null>(null);
   const [result, setResult] = useState<ResultCategory | null>(null);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleStart = () => {
     setStep('quiz');
@@ -30,14 +34,35 @@ export default function Quiz() {
     }
   };
 
-  const handleFormSubmit = (data: UserData) => {
+  const handleFormSubmit = async (data: UserData) => {
+    setIsSubmitting(true);
+    const userResult = getResultByScore(score);
+    
+    const apiResponse = await submitQuiz({
+      name: data.name,
+      whatsapp: data.whatsapp,
+      email: data.email,
+      businessType: data.businessType,
+      score: score,
+      level: userResult.level,
+      levelTitle: userResult.title,
+      levelEmoji: userResult.emoji,
+      recommendations: userResult.recommendations.map(r => `${r.icon} ${r.text}`),
+    });
+    
+    if (apiResponse.success && apiResponse.data) {
+      setProducts(apiResponse.data.products || []);
+    }
+    
     setUserData(data);
-    setResult(getResultByScore(score));
+    setResult(userResult);
+    setIsSubmitting(false);
     setStep('result');
     
     console.log('User Data:', data);
     console.log('Score:', score);
-    console.log('Result:', getResultByScore(score));
+    console.log('Result:', userResult);
+    console.log('API Response:', apiResponse);
   };
 
   return (
@@ -61,14 +86,14 @@ export default function Quiz() {
       {step === 'form' && (
         <div className="min-h-screen flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 w-full max-w-lg">
-            <UserForm onSubmit={handleFormSubmit} />
+            <UserForm onSubmit={handleFormSubmit} isSubmitting={isSubmitting} />
           </div>
         </div>
       )}
       
       {step === 'result' && result && userData && (
         <div className="min-h-screen py-12 px-4">
-          <Result result={result} score={score} userData={userData} />
+          <Result result={result} score={score} userData={userData} products={products} />
         </div>
       )}
     </div>

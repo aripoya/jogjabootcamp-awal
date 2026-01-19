@@ -1,12 +1,14 @@
 import type { ResultCategory, UserData } from '../types';
+import type { Product } from '../services/api';
 
 interface ResultProps {
   result: ResultCategory;
   score: number;
   userData: UserData;
+  products: Product[];
 }
 
-export default function Result({ result, score, userData }: ResultProps) {
+export default function Result({ result, score, userData, products }: ResultProps) {
   const whatsappMessage = encodeURIComponent(
     `Halo Jogjabootcamp! Saya ${userData.name}, hasil quiz saya Level ${result.level} (${result.title}). Saya ingin konsultasi lebih lanjut.` 
   );
@@ -49,6 +51,47 @@ export default function Result({ result, score, userData }: ResultProps) {
           ))}
         </div>
       </div>
+      
+      {products.length > 0 && (
+        <div className="bg-gradient-to-br from-gold/10 to-gold/5 border-2 border-gold/30 rounded-2xl p-6 mb-8">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-3xl">🎁</span>
+            <h3 className="font-heading text-2xl font-bold text-navy-primary">
+              Hadiah Spesial untuk Anda!
+            </h3>
+          </div>
+          <p className="text-gray-700 mb-6">
+            Sebagai apresiasi telah mengikuti quiz ini, kami berikan <strong className="text-gold">produk digital GRATIS</strong> yang disesuaikan dengan level bisnis Anda:
+          </p>
+          <div className="space-y-4">
+            {products.map((product, index) => (
+              <div key={index} className="bg-white rounded-xl p-5 border-2 border-gold/20 hover:border-gold hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-lg text-navy-primary mb-2">
+                      📦 {product.name}
+                    </h4>
+                    <p className="text-gray-600 text-sm mb-3">
+                      {product.description}
+                    </p>
+                  </div>
+                  <a
+                    href={product.downloadUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-shrink-0 bg-gradient-to-r from-gold to-gold-hover text-navy-primary font-bold px-6 py-3 rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap"
+                  >
+                    ⬇️ Download
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-500 mt-4 text-center">
+            💡 Produk ini sudah dikirim juga ke email Anda: <strong>{userData.email}</strong>
+          </p>
+        </div>
+      )}
       
       <div className="bg-gold/10 border-l-4 border-gold rounded-r-lg p-5 mb-8">
         <p className="text-navy-primary italic leading-relaxed">
