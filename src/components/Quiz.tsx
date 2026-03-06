@@ -11,7 +11,7 @@ import UserForm from './UserForm';
 import Result from './Result';
 
 export default function Quiz() {
-  const [step, setStep] = useState<QuizStep>('landing');
+  const [step, setStep] = useState<QuizStep>('quiz');
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [userData, setUserData] = useState<UserData | null>(null);
