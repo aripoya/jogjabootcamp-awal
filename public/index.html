@@ -84,7 +84,11 @@
 </div>
 <div class="relative">
 <div class="w-full aspect-video bg-blue-100 dark:bg-blue-900/20 rounded-3xl overflow-hidden border-8 border-white dark:border-slate-800 shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="Illustration of a friendly smiling business owner working on a laptop" src="https://image.jogjabootcamp.com/Landing%20page/hero_jogjabootcamp.png"/>
+<picture class="block w-full h-full">
+<source type="image/avif" srcset="/images/hero-640.avif 640w, /images/hero-960.avif 960w, /images/hero-1280.avif 1280w, /images/hero-1920.avif 1920w" sizes="(min-width: 1280px) 568px, (min-width: 1024px) calc(50vw - 72px), calc(100vw - 48px)"/>
+<source type="image/webp" srcset="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w" sizes="(min-width: 1280px) 568px, (min-width: 1024px) calc(50vw - 72px), calc(100vw - 48px)"/>
+<img class="w-full h-full object-cover" src="/images/hero-1280.jpg" width="1280" height="714" fetchpriority="high" alt="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas"/>
+</picture>
 </div>
 <div class="absolute -bottom-6 -left-6 bg-accent-amber p-6 rounded-2xl shadow-xl hidden md:block">
 <p class="text-white font-black text-2xl">500+</p>
