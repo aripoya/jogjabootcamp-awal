@@ -1,5 +1,6 @@
 import type { ResultCategory, UserData } from '../types';
 import type { Product } from '../services/api';
+import { QUIZ_URL, WHATSAPP_NUMBER } from '../config';
 
 interface ResultProps {
   result: ResultCategory;
@@ -12,7 +13,7 @@ export default function Result({ result, score, userData, products }: ResultProp
   const whatsappMessage = encodeURIComponent(
     `Halo Jogjabootcamp! Saya ${userData.name}, hasil quiz saya Level ${result.level} (${result.title}). Saya ingin konsultasi lebih lanjut.` 
   );
-  const whatsappLink = `https://wa.me/6281234567890?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <div className="max-w-2xl mx-auto animate-fadeIn">
@@ -123,9 +124,13 @@ export default function Result({ result, score, userData, products }: ResultProp
         <p className="text-gray-600 mb-4">Bagikan quiz ini ke teman pengusaha:</p>
         <div className="flex justify-center gap-4">
           <button 
-            onClick={() => {
-              navigator.clipboard.writeText('https://awal.jogjabootcamp.com');
-              alert('Link berhasil dicopy!');
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(QUIZ_URL);
+                alert('Link berhasil dicopy!');
+              } catch {
+                prompt('Copy link ini:', QUIZ_URL);
+              }
             }}
             className="px-6 py-2 border-2 border-navy-primary text-navy-primary rounded-lg hover:bg-navy-primary hover:text-white transition-colors"
           >
