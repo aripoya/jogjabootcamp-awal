@@ -18,6 +18,7 @@ export default function Quiz() {
   const [result, setResult] = useState<ResultCategory | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleStart = () => {
     setStep('quiz');
@@ -34,10 +35,7 @@ export default function Quiz() {
     }
   };
 
-  const handleFormSubmit = async (data: UserData) => {
-    setIsSubmitting(true);
-    const userResult = getResultByScore(score);
-    
+  const sendSubmission = async (data: UserData, userResult: ResultCategory) => {
     const apiResponse = await submitQuiz({
       name: data.name,
       whatsapp: data.whatsapp,
@@ -49,20 +47,31 @@ export default function Quiz() {
       levelEmoji: userResult.emoji,
       recommendations: userResult.recommendations.map(r => `${r.icon} ${r.text}`),
     });
-    
-    if (apiResponse.success && apiResponse.data) {
-      setProducts(apiResponse.data.products || []);
+
+    if (apiResponse.success) {
+      setProducts(apiResponse.data?.products || []);
+      setSubmitError(null);
+    } else {
+      setSubmitError(apiResponse.message);
     }
-    
+  };
+
+  const handleFormSubmit = async (data: UserData) => {
+    setIsSubmitting(true);
+    const userResult = getResultByScore(score);
+    await sendSubmission(data, userResult);
+
     setUserData(data);
     setResult(userResult);
     setIsSubmitting(false);
     setStep('result');
-    
-    console.log('User Data:', data);
-    console.log('Score:', score);
-    console.log('Result:', userResult);
-    console.log('API Response:', apiResponse);
+  };
+
+  const handleRetry = async () => {
+    if (!userData || !result) return;
+    setIsSubmitting(true);
+    await sendSubmission(userData, result);
+    setIsSubmitting(false);
   };
 
   return (
@@ -93,7 +102,15 @@ export default function Quiz() {
       
       {step === 'result' && result && userData && (
         <div className="min-h-screen py-12 px-4">
-          <Result result={result} score={score} userData={userData} products={products} />
+          <Result
+            result={result}
+            score={score}
+            userData={userData}
+            products={products}
+            submitError={submitError}
+            isRetrying={isSubmitting}
+            onRetry={handleRetry}
+          />
         </div>
       )}
     </div>

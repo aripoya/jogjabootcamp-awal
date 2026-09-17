@@ -4,6 +4,19 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>JogjaBootcamp - Transformasi Digital UMKM Anda</title>
+<meta name="description" content="Bergabunglah dengan komunitas transformasi digital yang dirancang khusus untuk pemilik UMKM. Belajar praktis, tumbuh bersama, dan kuasai teknologi tanpa pusing."/>
+<link rel="canonical" href="https://jogjabootcamp.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="JogjaBootcamp"/>
+<meta property="og:locale" content="id_ID"/>
+<meta property="og:url" content="https://jogjabootcamp.com/"/>
+<meta property="og:title" content="JogjaBootcamp - Transformasi Digital UMKM Anda"/>
+<meta property="og:description" content="Bergabunglah dengan komunitas transformasi digital yang dirancang khusus untuk pemilik UMKM. Belajar praktis, tumbuh bersama, dan kuasai teknologi tanpa pusing."/>
+<meta property="og:image" content="https://jogjabootcamp.com/images/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="icon" type="image/png" href="https://image.jogjabootcamp.com/Logo/Logo-Symbol.png"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
@@ -84,7 +97,11 @@
 </div>
 <div class="relative">
 <div class="w-full aspect-video bg-blue-100 dark:bg-blue-900/20 rounded-3xl overflow-hidden border-8 border-white dark:border-slate-800 shadow-2xl">
-<img class="w-full h-full object-cover" data-alt="Illustration of a friendly smiling business owner working on a laptop" src="https://image.jogjabootcamp.com/Landing%20page/hero_jogjabootcamp.png"/>
+<picture class="block w-full h-full">
+<source type="image/avif" srcset="/images/hero-640.avif 640w, /images/hero-960.avif 960w, /images/hero-1280.avif 1280w, /images/hero-1920.avif 1920w" sizes="(min-width: 1280px) 568px, (min-width: 1024px) calc(50vw - 72px), calc(100vw - 48px)"/>
+<source type="image/webp" srcset="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w" sizes="(min-width: 1280px) 568px, (min-width: 1024px) calc(50vw - 72px), calc(100vw - 48px)"/>
+<img class="w-full h-full object-cover" src="/images/hero-1280.jpg" width="1280" height="714" fetchpriority="high" alt="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas"/>
+</picture>
 </div>
 <div class="absolute -bottom-6 -left-6 bg-accent-amber p-6 rounded-2xl shadow-xl hidden md:block">
 <p class="text-white font-black text-2xl">500+</p>
@@ -458,9 +475,9 @@
 <a href="/quiz/" class="bg-accent-amber text-white px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl inline-block">
                     Daftar Sekarang — Gratis
                 </a>
-<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-xl hover:bg-white/20 transition-colors">
+<a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Halo%20JogjaBootcamp!%20Saya%20mau%20tanya%20tentang%20komunitas%20dan%20kelasnya." target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-xl hover:bg-white/20 transition-colors inline-block">
                     Tanya via WhatsApp
-                </button>
+                </a>
 </div>
 </div>
 </section>

@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-import { copyFileSync, mkdirSync, renameSync, existsSync } from 'fs'
+import { mkdirSync, readFileSync, renameSync, existsSync, writeFileSync } from 'fs'
+import { WHATSAPP_NUMBER } from './src/config'
 
 // Plugin: setelah build, pindahkan React app ke /quiz/ dan taruh landing page statis di /
 function landingPagePlugin() {
@@ -23,9 +24,10 @@ function landingPagePlugin() {
         renameSync(reactIndex, resolve(quizDir, 'index.html'))
       }
 
-      // Copy landing page statis ke dist/index.html
+      // Copy landing page statis ke dist/index.html, sekalian isi nomor WhatsApp dari src/config.ts
       if (existsSync(landingSource)) {
-        copyFileSync(landingSource, resolve(distDir, 'index.html'))
+        const landingHtml = readFileSync(landingSource, 'utf-8').replaceAll('{{WHATSAPP_NUMBER}}', WHATSAPP_NUMBER)
+        writeFileSync(resolve(distDir, 'index.html'), landingHtml)
       }
     },
   }

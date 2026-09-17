@@ -1,18 +1,22 @@
 import type { ResultCategory, UserData } from '../types';
 import type { Product } from '../services/api';
+import { QUIZ_URL, WHATSAPP_NUMBER } from '../config';
 
 interface ResultProps {
   result: ResultCategory;
   score: number;
   userData: UserData;
   products: Product[];
+  submitError: string | null;
+  isRetrying: boolean;
+  onRetry: () => void;
 }
 
-export default function Result({ result, score, userData, products }: ResultProps) {
+export default function Result({ result, score, userData, products, submitError, isRetrying, onRetry }: ResultProps) {
   const whatsappMessage = encodeURIComponent(
     `Halo Jogjabootcamp! Saya ${userData.name}, hasil quiz saya Level ${result.level} (${result.title}). Saya ingin konsultasi lebih lanjut.` 
   );
-  const whatsappLink = `https://wa.me/6281234567890?text=${whatsappMessage}`;
+  const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${whatsappMessage}`;
 
   return (
     <div className="max-w-2xl mx-auto animate-fadeIn">
@@ -92,7 +96,26 @@ export default function Result({ result, score, userData, products }: ResultProp
           </p>
         </div>
       )}
-      
+
+      {submitError && (
+        <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6 mb-8">
+          <h3 className="font-heading text-xl font-semibold text-navy-primary mb-2">
+            ⚠️ Hadiah belum bisa dikirim
+          </h3>
+          <p className="text-gray-700">{submitError}</p>
+          <p className="text-gray-700 mt-1 mb-4">
+            Produk digital gratis untuk <strong>{userData.email}</strong> belum terkirim. Silakan coba lagi, atau hubungi kami via WhatsApp di bawah.
+          </p>
+          <button
+            onClick={onRetry}
+            disabled={isRetrying}
+            className="w-full bg-gradient-to-r from-gold to-gold-hover text-navy-primary font-bold py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isRetrying ? 'Mengirim ulang...' : '🔄 Coba Kirim Lagi'}
+          </button>
+        </div>
+      )}
+
       <div className="bg-gold/10 border-l-4 border-gold rounded-r-lg p-5 mb-8">
         <p className="text-navy-primary italic leading-relaxed">
           "Kurnia Sari butuh 6 tahun dari website sederhana sampai 10 outlet dengan sistem digital terintegrasi. Transformasi adalah marathon, bukan sprint."
@@ -123,9 +146,13 @@ export default function Result({ result, score, userData, products }: ResultProp
         <p className="text-gray-600 mb-4">Bagikan quiz ini ke teman pengusaha:</p>
         <div className="flex justify-center gap-4">
           <button 
-            onClick={() => {
-              navigator.clipboard.writeText('https://awal.jogjabootcamp.com');
-              alert('Link berhasil dicopy!');
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(QUIZ_URL);
+                alert('Link berhasil dicopy!');
+              } catch {
+                prompt('Copy link ini:', QUIZ_URL);
+              }
             }}
             className="px-6 py-2 border-2 border-navy-primary text-navy-primary rounded-lg hover:bg-navy-primary hover:text-white transition-colors"
           >
