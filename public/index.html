@@ -1,543 +1,1119 @@
 <!DOCTYPE html>
-
-<html lang="id"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>JogjaBootcamp - Transformasi Digital UMKM Anda</title>
-<meta name="description" content="Bergabunglah dengan komunitas transformasi digital yang dirancang khusus untuk pemilik UMKM. Belajar praktis, tumbuh bersama, dan kuasai teknologi tanpa pusing."/>
-<link rel="canonical" href="https://jogjabootcamp.com/"/>
-<meta property="og:type" content="website"/>
-<meta property="og:site_name" content="JogjaBootcamp"/>
-<meta property="og:locale" content="id_ID"/>
-<meta property="og:url" content="https://jogjabootcamp.com/"/>
-<meta property="og:title" content="JogjaBootcamp - Transformasi Digital UMKM Anda"/>
-<meta property="og:description" content="Bergabunglah dengan komunitas transformasi digital yang dirancang khusus untuk pemilik UMKM. Belajar praktis, tumbuh bersama, dan kuasai teknologi tanpa pusing."/>
-<meta property="og:image" content="https://jogjabootcamp.com/images/og-image.jpg"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:image:alt" content="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<link rel="icon" type="image/png" href="https://image.jogjabootcamp.com/Logo/Logo-Symbol.png"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#1a57db",
-                        "background-light": "#f6f6f8",
-                        "background-dark": "#111621",
-                        "accent-amber": "#f59e0b",
-                        "success-green": "#10b981",
-                        "error-red": "#ef4444",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
-            },
-        }
-    </script>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JogjaBootcamp – Panduan Praktis Digitalisasi Usaha UMKM</title>
+<meta name="description" content="Ebook ringkas, webinar rutin, dan mentoring untuk pemilik UMKM yang ingin penjualan lebih lancar dan pembukuan lebih rapi. Mulai Rp 149rb per bulan.">
+<link rel="canonical" href="https://jogjabootcamp.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="JogjaBootcamp">
+<meta property="og:locale" content="id_ID">
+<meta property="og:url" content="https://jogjabootcamp.com/">
+<meta property="og:title" content="JogjaBootcamp – Panduan Praktis Digitalisasi Usaha UMKM">
+<meta property="og:description" content="Ebook ringkas, webinar rutin, dan mentoring untuk pemilik UMKM yang ingin penjualan lebih lancar dan pembukuan lebih rapi. Mulai Rp 149rb per bulan.">
+<meta property="og:image" content="https://jogjabootcamp.com/images/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="https://image.jogjabootcamp.com/Logo/Logo-Symbol.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap">
 <style>
-        body { font-family: 'Inter', sans-serif; }
-        .basecamp-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03); }
-        .sticky-nav { position: sticky; top: 0; z-index: 50; }
-    </style>
+  /* ---------- Token desain ---------- */
+  :root {
+    --bg: #FAF9F6;
+    --bg-alt: #F3F1EC;
+    --bg-white: #FFFFFF;
+    --navy: #182751;
+    --navy-hover: #243A73;
+    --text: #1C2233;
+    --text-2: #4A5163;
+    --text-3: #6B7080;
+    --accent: #FF561D;
+    --eyebrow: #B8400F;
+    --line: #E7E4DD;
+    --line-2: #E2DED4;
+    --btn-line: #C9CDD8;
+    --placeholder: #EFECE5;
+    --on-navy-2: #B9C0D6;
+    --on-navy-3: #E4E7F0;
+    --on-navy-line: #34457A;
+    --on-navy-btn-line: #56648F;
+
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Plus Jakarta Sans", "Helvetica Neue", Arial, sans-serif;
+
+    --radius-btn: 8px;
+    --radius-sm: 12px;
+    --radius-lg: 16px;
+
+    --header-h: 64px;
+    --gutter: 24px;
+
+    /* Skala cair: 0 di lebar 390px (desain HP), 1 di lebar 1440px (desain desktop).
+       Pola pemakaian: clamp(nilaiHP, calc(nilaiHP + selisih * var(--f)), nilaiDesktop) */
+    --f: ((100vw - 390px) / 1050);
+  }
+
+  /* ---------- Dasar ---------- */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  img, svg { display: block; max-width: 100%; }
+  h1, h2 { margin: 0; font-family: var(--serif); font-weight: 500; color: var(--navy); }
+  h3 { margin: 0; font-family: var(--sans); font-weight: 600; }
+  p { margin: 0; }
+  ul, ol { margin: 0; padding: 0; list-style: none; }
+  a { color: var(--navy); text-decoration: none; }
+  a:hover { color: var(--eyebrow); }
+  :focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+  [id] { scroll-margin-top: var(--header-h); }
+
+  .container { width: min(100% - 2 * var(--gutter), 1200px); margin-inline: auto; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  .skip-link {
+    position: absolute; top: -200px; left: 16px; z-index: 100;
+    padding: 12px 16px; border-radius: var(--radius-btn);
+    background: var(--navy); color: #fff; font-weight: 600;
+  }
+  .skip-link:focus { top: 12px; color: #fff; }
+
+  /* ---------- Komponen ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 0 18px;
+    border: 1px solid transparent; border-radius: var(--radius-btn);
+    font-family: inherit; font-size: 15px; font-weight: 600; line-height: 1.25; text-align: center;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .btn--md { min-height: 50px; font-size: 16px; }
+  .btn--lg {
+    min-height: clamp(52px, calc(52px + 2 * var(--f)), 54px);
+    padding-inline: clamp(24px, calc(24px + 6 * var(--f)), 30px);
+    font-size: 16px;
+  }
+  .btn--primary { background: var(--navy); color: #fff; }
+  .btn--primary:hover { background: var(--navy-hover); color: #fff; }
+  .btn--outline { border-color: var(--btn-line); color: var(--navy); }
+  .btn--outline:hover { border-color: var(--navy); color: var(--navy); }
+  .btn--light { background: #fff; color: var(--navy); font-weight: 700; }
+  .btn--light:hover { background: var(--on-navy-3); color: var(--navy); }
+  .btn--outline-light { border-color: var(--on-navy-btn-line); color: #fff; }
+  .btn--outline-light:hover { border-color: var(--on-navy-2); color: #fff; }
+
+  .eyebrow {
+    font-size: clamp(11px, calc(11px + 2 * var(--f)), 13px);
+    font-weight: 600;
+    letter-spacing: clamp(1.5px, calc(1.5px + 0.5 * var(--f)), 2px);
+    line-height: 1.4;
+    color: var(--eyebrow);
+  }
+  .eyebrow--rule { display: flex; align-items: center; gap: clamp(10px, calc(10px + 2 * var(--f)), 12px); }
+  .eyebrow--rule::before {
+    content: ""; flex: none;
+    width: clamp(24px, calc(24px + 8 * var(--f)), 32px); height: 2px;
+    background: var(--accent);
+  }
+
+  .section-head { display: flex; flex-direction: column; gap: clamp(14px, calc(14px + 2 * var(--f)), 16px); }
+  .section-head h2 { font-size: clamp(32px, calc(32px + 12 * var(--f)), 44px); line-height: 1.15; }
+
+  .placeholder {
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px; border-radius: var(--radius-sm);
+    background: var(--placeholder); color: var(--text-2);
+    font-size: 14px; text-align: center;
+  }
+
+  /* ---------- Header ---------- */
+  .site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+  }
+  .site-header .container {
+    --gutter: 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: calc(var(--header-h) - 1px);
+  }
+  .brand { display: flex; align-items: center; }
+  .brand img { width: 154px; height: 36px; object-fit: contain; object-position: left center; }
+
+  .menu-toggle {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; padding: 0;
+    border: 1px solid var(--line); border-radius: var(--radius-btn);
+    background: #fff; color: var(--navy); cursor: pointer;
+  }
+  .menu-toggle svg { width: 20px; height: 20px; }
+  .menu-toggle .icon-close,
+  .menu-toggle[aria-expanded="true"] .icon-menu { display: none; }
+  .menu-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+  .site-nav {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    padding: 4px 20px 20px;
+    background: var(--bg);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .menu-toggle[aria-expanded="true"] + .site-nav { display: block; }
+  .site-nav a:not(.btn) {
+    display: flex; align-items: center; min-height: 52px;
+    border-bottom: 1px solid var(--line);
+    font-size: 16px; font-weight: 500;
+  }
+  .site-nav__divider { display: none; }
+  .site-nav .btn { width: 100%; min-height: 50px; margin-top: 20px; font-size: 16px; }
+
+  @media (min-width: 1024px) {
+    :root { --header-h: 84px; }
+    .site-header .container { --gutter: 24px; }
+    .brand img { width: 180px; height: 42px; }
+    .menu-toggle { display: none; }
+    .site-nav,
+    .menu-toggle[aria-expanded="true"] + .site-nav {
+      display: flex; align-items: center; gap: 40px;
+      position: static; padding: 0; border: 0; background: none;
+    }
+    .site-nav__links { display: flex; gap: 40px; }
+    .site-nav a:not(.btn) { display: inline; min-height: 0; border: 0; font-size: 15px; }
+    .site-nav__divider { display: block; width: 1px; height: 20px; background: var(--line); }
+    .site-nav .btn { width: auto; min-height: 44px; margin: 0; padding-inline: 22px; font-size: 15px; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding-block: clamp(40px, calc(40px + 48 * var(--f)), 88px) clamp(56px, calc(56px + 32 * var(--f)), 88px);
+  }
+  .hero .container { display: grid; gap: 32px; }
+  .hero__content { display: flex; flex-direction: column; gap: clamp(20px, calc(20px + 8 * var(--f)), 28px); }
+  .hero h1 {
+    font-size: clamp(38px, calc(38px + 26 * var(--f)), 64px);
+    line-height: 1.1;
+    letter-spacing: clamp(-1px, calc(-0.5px - 0.5 * var(--f)), -0.5px);
+  }
+  .hero__lead {
+    max-width: 540px;
+    font-size: clamp(16px, calc(16px + 3 * var(--f)), 19px);
+    line-height: 1.7;
+    color: var(--text-2);
+  }
+  .hero__actions {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-top: clamp(4px, calc(4px + 4 * var(--f)), 8px);
+  }
+  .hero__note { font-size: clamp(13px, calc(13px + 1 * var(--f)), 14px); color: var(--text-3); text-align: center; }
+  .hero__media {
+    height: clamp(300px, 55vw, 460px);
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    background: var(--placeholder);
+  }
+  .hero__media picture { display: block; }
+  .hero__media picture,
+  .hero__media img { width: 100%; height: 100%; }
+  /* object-position disetel untuk foto sementara; cek lagi saat foto asli dipasang */
+  .hero__media img { object-fit: cover; object-position: 35% 50%; }
+
+  @media (min-width: 768px) {
+    .hero__actions { flex-direction: row; flex-wrap: wrap; gap: 14px; }
+    .hero__note { text-align: left; }
+  }
+  @media (min-width: 1024px) {
+    .hero .container {
+      grid-template-columns: minmax(0, 584fr) minmax(0, 520fr);
+      align-items: center;
+      column-gap: clamp(32px, calc(32px + 64 * var(--f)), 96px);
+    }
+    .hero h1 { line-height: 1.08; }
+    .hero__media { height: auto; aspect-ratio: 520 / 544; }
+  }
+
+  /* ---------- Statistik ---------- */
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-block: 1px solid var(--line); }
+  .stat { display: flex; flex-direction: column; gap: 4px; padding-block: 24px; }
+  .stat:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+  .stat:nth-child(even) { padding-left: 20px; border-left: 1px solid var(--line); }
+  .stat__value {
+    font-family: var(--serif);
+    font-size: clamp(36px, calc(36px + 8 * var(--f)), 44px);
+    line-height: 1.1;
+    color: var(--navy);
+  }
+  .stat__label { font-size: clamp(13px, calc(13px + 1 * var(--f)), 14px); line-height: 1.4; color: var(--text-3); }
+
+  @media (min-width: 768px) {
+    .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .stat:nth-child(n) {
+      gap: 6px;
+      padding-block: clamp(24px, calc(24px + 18 * var(--f)), 42px);
+      padding-left: clamp(20px, calc(20px + 20 * var(--f)), 40px);
+      border-bottom: 0;
+      border-left: 1px solid var(--line);
+    }
+    .stat:first-child { padding-left: 8px; border-left: 0; }
+  }
+
+  /* ---------- Mengapa JogjaBootcamp ---------- */
+  .why {
+    padding-block: clamp(64px, calc(64px + 48 * var(--f)), 112px) clamp(32px, calc(32px + 8 * var(--f)), 40px);
+  }
+  .why .container { display: grid; gap: 36px; }
+  .why .section-head { gap: clamp(14px, calc(14px + 6 * var(--f)), 20px); }
+  .why__lists { display: grid; gap: 36px; }
+  .why__title {
+    margin-bottom: clamp(8px, calc(8px + 4 * var(--f)), 12px);
+    font-size: clamp(14px, calc(14px + 1 * var(--f)), 15px);
+    color: var(--navy);
+  }
+  .why__title--muted { font-weight: 500; color: var(--text-3); }
+  .rule-list { border-bottom: 1px solid var(--line); }
+  .rule-list li {
+    padding-block: clamp(14px, calc(14px + 4 * var(--f)), 18px);
+    border-top: 1px solid var(--line);
+    font-size: clamp(15px, calc(15px + 1 * var(--f)), 16px);
+    line-height: 1.6;
+    color: var(--text-2);
+  }
+  .rule-list--check li { display: flex; gap: 12px; color: var(--text); }
+  .rule-list--check svg {
+    flex: none; width: 18px; height: 18px;
+    margin-top: calc((1.6em - 18px) / 2);
+    color: var(--navy);
+  }
+
+  @media (min-width: 768px) {
+    .why__lists { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, calc(24px + 32 * var(--f)), 56px); }
+  }
+  @media (min-width: 1024px) {
+    .why .container {
+      grid-template-columns: minmax(0, 400fr) minmax(0, 704fr);
+      align-items: start;
+      column-gap: clamp(32px, calc(32px + 64 * var(--f)), 96px);
+    }
+  }
+
+  /* ---------- Katalog ebook ---------- */
+  .ebooks {
+    padding-block: clamp(48px, calc(48px + 48 * var(--f)), 96px) clamp(40px, calc(48px - 8 * var(--f)), 48px);
+  }
+  .ebooks .container { display: grid; gap: 32px; }
+  .ebook-grid { display: grid; gap: 40px; }
+  .ebook { display: flex; flex-direction: column; gap: clamp(16px, calc(16px + 6 * var(--f)), 22px); }
+  .ebook__cover { height: clamp(220px, calc(220px + 80 * var(--f)), 300px); }
+  .ebook__body { display: flex; flex-direction: column; gap: clamp(10px, calc(16px - 6 * var(--f)), 16px); }
+  .ebook__category {
+    font-size: clamp(11px, calc(11px + 1 * var(--f)), 12px);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--text-3);
+  }
+  .ebook__title { font-size: clamp(19px, calc(19px + 2 * var(--f)), 21px); line-height: 1.35; color: var(--navy); }
+  .ebook__desc { font-size: 15px; line-height: 1.6; color: var(--text-2); }
+  .ebook__footer {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+    margin-top: auto;
+    padding-top: clamp(14px, calc(14px + 4 * var(--f)), 18px);
+    border-top: 1px solid var(--line);
+  }
+  .ebook__price { font-size: clamp(17px, calc(17px + 1 * var(--f)), 18px); font-weight: 600; color: var(--text); }
+  .ebooks__all {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 50px;
+    border: 1px solid var(--btn-line); border-radius: var(--radius-btn);
+    font-size: 15px; font-weight: 600;
+  }
+  .ebooks__all:hover { border-color: var(--navy); color: var(--navy); }
+
+  @media (min-width: 768px) {
+    .ebooks .container {
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas: "head all" "grid grid";
+      align-items: end;
+      column-gap: 24px;
+      row-gap: clamp(32px, calc(32px + 16 * var(--f)), 48px);
+    }
+    .ebooks .section-head { grid-area: head; }
+    .ebook-grid { grid-area: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, calc(20px + 12 * var(--f)), 32px); }
+    .ebooks__all {
+      grid-area: all;
+      position: relative;
+      display: inline-block; min-height: 0; padding-bottom: 4px;
+      border: 0; border-bottom: 1px solid currentColor; border-radius: 0;
+    }
+    /* Perbesar area sentuh ke 44px tanpa mengubah tampilan link */
+    .ebooks__all::after { content: ""; position: absolute; inset: -8px -4px; }
+    .ebooks__all:hover { color: var(--eyebrow); border-color: currentColor; }
+  }
+  @media (min-width: 1024px) {
+    .ebook__desc { line-height: 1.65; }
+  }
+
+  /* ---------- Harga ---------- */
+  .pricing {
+    margin-top: clamp(24px, calc(24px + 32 * var(--f)), 56px);
+    padding-block: clamp(64px, calc(64px + 40 * var(--f)), 104px);
+    background: var(--bg-white);
+    border-block: 1px solid var(--line);
+  }
+  .pricing .container { display: grid; gap: clamp(32px, calc(32px + 24 * var(--f)), 56px); }
+  .pricing .section-head h2 { font-size: clamp(34px, calc(34px + 14 * var(--f)), 48px); }
+  .section-lead { font-size: clamp(15px, calc(15px + 2 * var(--f)), 17px); line-height: 1.6; color: var(--text-2); }
+
+  .plans { display: grid; gap: 32px; }
+  .plan {
+    display: flex; flex-direction: column; gap: 18px;
+    padding: 28px 24px;
+    border: 1px solid var(--line); border-radius: var(--radius-lg);
+  }
+  /* Di HP Premium tampil paling atas: Premium, Ebook Satuan, Gratis */
+  .plan--premium { order: 1; gap: 20px; background: var(--navy); border-color: var(--navy); }
+  .plan--single { order: 2; }
+  .plan--free { order: 3; }
+  .plan__head { display: flex; flex-direction: column; gap: 8px; }
+  .plan__title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .plan__name { font-size: clamp(17px, calc(17px + 1 * var(--f)), 18px); color: var(--navy); }
+  .plan__desc { display: none; font-size: 14px; color: var(--text-3); }
+  .plan__price {
+    font-family: var(--serif);
+    font-size: clamp(36px, calc(36px + 12 * var(--f)), 48px);
+    line-height: 1.1;
+    color: var(--text);
+  }
+  .plan__features {
+    flex-grow: 1;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+    font-size: 15px; line-height: 2;
+    color: var(--text-2);
+  }
+  .plan__features .is-excluded { color: var(--text-3); }
+  .badge {
+    flex: none;
+    padding: 5px 10px;
+    border: 1px solid var(--accent); border-radius: 999px;
+    font-size: clamp(11px, calc(11px + 1 * var(--f)), 12px);
+    font-weight: 600;
+    letter-spacing: clamp(1.2px, calc(1.2px + 0.3 * var(--f)), 1.5px);
+    line-height: 1.3;
+    color: #fff;
+  }
+  .plan--premium .plan__name { color: #fff; }
+  .plan--premium .plan__desc { color: var(--on-navy-2); }
+  .plan--premium .plan__price { font-size: clamp(42px, calc(42px + 6 * var(--f)), 48px); color: #fff; }
+  .plan__unit {
+    font-family: var(--sans);
+    font-size: clamp(14px, calc(14px + 1 * var(--f)), 15px);
+    color: var(--on-navy-2);
+    white-space: nowrap;
+  }
+  .plan--premium .plan__features { padding-top: 16px; border-top-color: var(--on-navy-line); color: var(--on-navy-3); }
+  .plan--premium :focus-visible { outline-color: #fff; }
+
+  @media (min-width: 1024px) {
+    .pricing .section-head { align-items: center; text-align: center; }
+    .plans { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .plan,
+    .plan--premium { order: 0; gap: 24px; padding: clamp(24px, 2.78vw, 40px); }
+    .plan__desc { display: block; }
+    .plan__features,
+    .plan--premium .plan__features { padding-top: 20px; }
+  }
+
+  /* ---------- Isi Premium ---------- */
+  .benefits-section {
+    padding-block: clamp(64px, calc(64px + 40 * var(--f)), 104px) clamp(32px, calc(32px + 8 * var(--f)), 40px);
+  }
+  .benefits-section .container { display: grid; gap: clamp(32px, calc(32px + 16 * var(--f)), 48px); }
+  .benefits { display: grid; gap: 28px; }
+  .benefit { display: flex; gap: 16px; padding-top: 18px; border-top: 1px solid var(--navy); }
+  .benefit__num { flex: none; width: 28px; font-family: var(--serif); font-size: 18px; line-height: 1.3; color: var(--eyebrow); }
+  .benefit__body { display: flex; flex-direction: column; gap: 6px; }
+  .benefit__title { font-size: 17px; line-height: 1.35; color: var(--navy); }
+  .benefit__desc { font-size: 15px; line-height: 1.6; color: var(--text-2); }
+
+  @media (min-width: 768px) {
+    .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+    .benefit { flex-direction: column; gap: 12px; padding-top: 24px; }
+    .benefit__num { width: auto; font-size: 20px; }
+    .benefit__body { gap: 12px; }
+    .benefit__title { font-size: 18px; }
+    .benefit__desc { line-height: 1.65; }
+  }
+  @media (min-width: 1024px) {
+    .benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+
+  /* ---------- Tentang pendiri ---------- */
+  .founder {
+    padding-block: clamp(48px, calc(48px + 32 * var(--f)), 80px) clamp(64px, calc(64px + 16 * var(--f)), 80px);
+  }
+  .founder .container { display: grid; gap: 30px; }
+  .founder__photo { height: 340px; }
+  .founder__content { display: flex; flex-direction: column; gap: clamp(22px, calc(22px + 2 * var(--f)), 24px); }
+  .founder__quote { font-size: clamp(26px, calc(26px + 10 * var(--f)), 36px); font-style: italic; line-height: 1.35; }
+  .founder__bio { font-size: clamp(15px, calc(15px + 2 * var(--f)), 17px); line-height: 1.75; color: var(--text-2); }
+  .founder__person { display: flex; flex-direction: column; gap: 2px; }
+  .founder__name { font-weight: 600; color: var(--text); }
+  .founder__role { font-size: clamp(13px, calc(13px + 1 * var(--f)), 14px); color: var(--text-3); }
+
+  @media (min-width: 1024px) {
+    .founder .container {
+      grid-template-columns: minmax(0, 440fr) minmax(0, 664fr);
+      align-items: center;
+      column-gap: clamp(32px, calc(32px + 64 * var(--f)), 96px);
+    }
+    .founder__photo { height: auto; aspect-ratio: 440 / 460; border-radius: var(--radius-lg); }
+  }
+
+  /* ---------- Testimoni ---------- */
+  .testimonials {
+    padding-block: clamp(56px, calc(56px + 24 * var(--f)), 80px);
+    background: var(--bg-alt);
+  }
+  .testimonials .container { display: grid; gap: clamp(32px, calc(32px + 16 * var(--f)), 48px); }
+  .testimonials h2 { font-size: clamp(30px, calc(30px + 10 * var(--f)), 40px); line-height: 1.15; }
+  .testimonial-grid { display: grid; gap: 32px; }
+  .testimonial {
+    display: flex; flex-direction: column; gap: clamp(20px, calc(20px + 8 * var(--f)), 28px);
+    margin: 0;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .testimonial:last-child { padding-bottom: 0; border-bottom: 0; }
+  .testimonial blockquote {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: clamp(20px, calc(20px + 2 * var(--f)), 22px);
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .testimonial figcaption { display: flex; align-items: center; gap: clamp(12px, calc(12px + 2 * var(--f)), 14px); }
+  .avatar {
+    flex: none;
+    display: flex; align-items: center; justify-content: center;
+    width: clamp(44px, calc(44px + 4 * var(--f)), 48px); aspect-ratio: 1;
+    border-radius: 999px;
+    background: var(--line-2);
+    color: var(--text-2);
+    font-size: 10px;
+  }
+  .testimonial__name { display: block; font-size: clamp(14px, calc(14px + 1 * var(--f)), 15px); font-weight: 600; color: var(--text); }
+  .testimonial__role { display: block; font-size: 13px; color: var(--text-2); }
+
+  @media (min-width: 1024px) {
+    .testimonial-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+    .testimonial { padding-bottom: 0; border-bottom: 0; }
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    padding-block: clamp(64px, calc(64px + 40 * var(--f)), 104px) clamp(32px, calc(32px + 8 * var(--f)), 40px);
+  }
+  .faq .container { display: grid; gap: 28px; }
+  .faq .section-head { gap: clamp(14px, calc(14px + 6 * var(--f)), 20px); }
+  .faq__list { border-bottom: 1px solid var(--line); }
+  .faq-item { border-top: 1px solid var(--line); }
+  .faq-item summary {
+    display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+    padding-block: clamp(20px, calc(20px + 6 * var(--f)), 26px);
+    font-size: clamp(16px, calc(16px + 2 * var(--f)), 18px);
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--navy);
+    cursor: pointer;
+    list-style: none;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--eyebrow); }
+  .faq-item summary svg {
+    flex: none; width: 20px; height: 20px;
+    margin-top: calc((1.4em - 20px) / 2);
+    transition: transform .2s ease;
+  }
+  .faq-item[open] summary { padding-bottom: clamp(8px, calc(8px + 2 * var(--f)), 10px); }
+  .faq-item[open] summary svg { transform: rotate(180deg); }
+  .faq-item__answer {
+    padding-bottom: clamp(20px, calc(20px + 6 * var(--f)), 26px);
+    font-size: clamp(15px, calc(15px + 1 * var(--f)), 16px);
+    line-height: 1.6;
+    color: var(--text-2);
+  }
+  .faq__note { font-size: clamp(15px, calc(15px + 1 * var(--f)), 16px); line-height: 1.6; color: var(--text-2); }
+  .text-link { font-weight: 600; border-bottom: 1px solid currentColor; }
+  @media (prefers-reduced-motion: reduce) {
+    .faq-item summary svg { transition: none; }
+  }
+
+  @media (min-width: 1024px) {
+    .faq .container {
+      grid-template-columns: minmax(0, 400fr) minmax(0, 704fr);
+      grid-template-rows: auto 1fr;
+      grid-template-areas: "head list" "note list";
+      align-items: start;
+      column-gap: clamp(32px, calc(32px + 64 * var(--f)), 96px);
+      row-gap: 20px;
+    }
+    .faq .section-head { grid-area: head; }
+    .faq__list { grid-area: list; }
+    .faq__note { grid-area: note; line-height: 1.7; }
+    .faq-item__answer { line-height: 1.65; }
+  }
+
+  /* ---------- CTA ---------- */
+  .cta {
+    padding-block: clamp(32px, calc(32px + 8 * var(--f)), 40px) clamp(56px, calc(56px + 24 * var(--f)), 80px);
+  }
+  .cta__box {
+    position: relative;
+    display: flex; flex-direction: column; gap: 24px;
+    overflow: hidden;
+    padding: 40px 24px;
+    border-radius: var(--radius-lg);
+    background: var(--navy);
+  }
+  .cta__box::before {
+    content: "";
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--accent);
+  }
+  .cta__text { display: flex; flex-direction: column; gap: 16px; }
+  .cta h2 { font-size: clamp(32px, calc(32px + 16 * var(--f)), 48px); line-height: 1.15; color: #fff; }
+  .cta__text p { font-size: clamp(15px, calc(15px + 2 * var(--f)), 17px); line-height: 1.6; color: var(--on-navy-2); }
+  .cta__actions { display: flex; flex-direction: column; gap: 12px; }
+  /* Di HP tombol Gabung Premium di atas */
+  .cta__actions .btn--light { order: -1; }
+  .cta__box :focus-visible { outline-color: #fff; }
+
+  @media (min-width: 1024px) {
+    .cta__box {
+      flex-direction: row; align-items: center; justify-content: space-between; gap: 32px;
+      min-height: 300px;
+      padding: 48px clamp(24px, calc(24px + 64 * var(--f)), 88px);
+    }
+    .cta__box::before { width: 6px; height: 100%; }
+    .cta__text { max-width: 640px; }
+    .cta h2 { line-height: 1.1; }
+    .cta__actions { flex: none; flex-direction: row; gap: 14px; }
+    .cta__actions .btn--outline-light { padding-inline: 26px; }
+    .cta__actions .btn--light { order: 0; padding-inline: 28px; }
+  }
+
+  /* ---------- Footer ---------- */
+  .site-footer {
+    padding-block: clamp(48px, calc(48px + 16 * var(--f)), 64px) clamp(40px, calc(40px + 8 * var(--f)), 48px);
+    background: var(--bg-alt);
+    border-top: 1px solid var(--line);
+  }
+  .site-footer .container { display: grid; gap: clamp(32px, calc(32px + 8 * var(--f)), 40px); }
+  .footer-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+  .footer-brand { grid-column: 1 / -1; display: flex; flex-direction: column; gap: 12px; margin-bottom: 4px; }
+  .footer-brand img { width: 154px; height: 36px; object-fit: contain; object-position: left center; }
+  .footer-brand p { font-size: 14px; line-height: 1.6; color: var(--text-2); }
+  .footer-col h2 { font-family: var(--sans); font-size: 14px; font-weight: 600; line-height: 1.5; color: var(--text); }
+  .footer-col ul { display: flex; flex-direction: column; gap: 12px; margin-top: 12px; font-size: 14px; color: var(--text-2); }
+  .footer-col a { color: var(--text-2); }
+  .footer-col a:hover { color: var(--eyebrow); }
+  .footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid var(--line-2);
+    font-size: 13px; line-height: 1.8;
+    color: var(--text-2);
+  }
+
+  @media (min-width: 768px) {
+    .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .footer-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; }
+    .footer-brand { grid-column: auto; gap: 16px; margin-bottom: 0; }
+    .footer-brand img { width: 180px; height: 42px; }
+    .footer-brand p { line-height: 1.7; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 16px; padding-top: 24px; line-height: 1.5; }
+  }
+
+  /* ---------- Tinggi minimum section desktop, mengikuti desain 1440px ---------- */
+  @media (min-width: 1024px) {
+    .why { min-height: 560px; }
+    .ebooks { min-height: 800px; }
+    .pricing { min-height: 860px; }
+    .benefits-section { min-height: 460px; }
+    .founder { min-height: 620px; }
+    .testimonials { min-height: 520px; }
+  }
+</style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
-<!-- Sticky Navbar -->
-<nav class="sticky-nav bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-16 items-center">
-<div class="flex items-center">
-<img src="https://image.jogjabootcamp.com/Logo/Logo-Symbol%20%26%20Typography.png" alt="JogjaBootcamp" class="h-8"/>
-</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#komunitas">Komunitas</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#ebook">Ebook</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#tentang">Tentang</a>
-<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Login</a>
-<a href="/quiz/" class="bg-primary text-white px-5 py-2 rounded-lg font-bold text-sm hover:bg-blue-700 transition-all shadow-md">
-                        Bergabung Gratis
-                    </a>
-</div>
-<div class="md:hidden">
-<span class="material-symbols-outlined">menu</span>
-</div>
-</div>
-</div>
-</nav>
-<!-- Hero Section -->
-<header class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-<div class="space-y-8">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider">
-<span class="material-symbols-outlined text-sm">verified_user</span>
-                    Bagian dari ekosistem NotaKu &amp; MiniAIsland
-                </div>
-<h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white">
-                    Transformasi Digital UMKM Anda <span class="text-primary">Dimulai dari Sini</span>
-</h1>
-<p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
-                    Bergabunglah dengan komunitas transformasi digital yang dirancang khusus untuk pemilik UMKM. Belajar praktis, tumbuh bersama, dan kuasai teknologi tanpa pusing.
-                </p>
-<div class="flex flex-wrap gap-4">
-<a href="/quiz/" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/20 inline-block">
-                        Bergabung Komunitas
-                    </a>
-<button class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-colors">
-                        Lihat Ebook
-                    </button>
-</div>
-</div>
-<div class="relative">
-<div class="w-full aspect-video bg-blue-100 dark:bg-blue-900/20 rounded-3xl overflow-hidden border-8 border-white dark:border-slate-800 shadow-2xl">
-<picture class="block w-full h-full">
-<source type="image/avif" srcset="/images/hero-640.avif 640w, /images/hero-960.avif 960w, /images/hero-1280.avif 1280w, /images/hero-1920.avif 1920w" sizes="(min-width: 1280px) 568px, (min-width: 1024px) calc(50vw - 72px), calc(100vw - 48px)"/>
-<source type="image/webp" srcset="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w" sizes="(min-width: 1280px) 568px, (min-width: 1024px) calc(50vw - 72px), calc(100vw - 48px)"/>
-<img class="w-full h-full object-cover" src="/images/hero-1280.jpg" width="1280" height="714" fetchpriority="high" alt="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas"/>
-</picture>
-</div>
-<div class="absolute -bottom-6 -left-6 bg-accent-amber p-6 rounded-2xl shadow-xl hidden md:block">
-<p class="text-white font-black text-2xl">500+</p>
-<p class="text-white/90 text-sm font-medium">Pemilik UMKM Aktif</p>
-</div>
-</div>
-</div>
+<body>
+<a class="skip-link" href="#konten">Langsung ke konten</a>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top" aria-label="JogjaBootcamp beranda">
+      <img src="/logo-jogjabootcamp.png" alt="JogjaBootcamp" width="180" height="42">
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Buka menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Menu utama">
+      <ul class="site-nav__links">
+        <li><a href="#ebook">Ebook</a></li>
+        <li><a href="#harga">Harga</a></li>
+        <li><a href="#premium">Premium</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <span class="site-nav__divider" aria-hidden="true"></span>
+      <!-- TODO: link halaman Masuk (login) -->
+      <a href="#">Masuk</a>
+      <a class="btn btn--primary" href="#harga">Gabung Premium</a>
+    </nav>
+  </div>
 </header>
-<!-- Stats Bar -->
-<section class="bg-white dark:bg-slate-900 py-12 border-y border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-<div class="text-center space-y-2">
-<p class="text-3xl font-black text-primary">500+</p>
-<p class="text-slate-500 font-medium uppercase text-xs tracking-widest">Anggota</p>
-</div>
-<div class="text-center space-y-2 border-l border-slate-200 dark:border-slate-800">
-<p class="text-3xl font-black text-primary">12</p>
-<p class="text-slate-500 font-medium uppercase text-xs tracking-widest">Ebook</p>
-</div>
-<div class="text-center space-y-2 border-l border-slate-200 dark:border-slate-800">
-<p class="text-3xl font-black text-primary">10</p>
-<p class="text-slate-500 font-medium uppercase text-xs tracking-widest">Kota</p>
-</div>
-<div class="text-center space-y-2 border-l border-slate-200 dark:border-slate-800">
-<p class="text-3xl font-black text-primary">2023</p>
-<p class="text-slate-500 font-medium uppercase text-xs tracking-widest">Sejak</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Problem vs Solution -->
-<section class="py-24 bg-background-light dark:bg-background-dark">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-2 gap-16">
-<!-- Problem -->
-<div class="space-y-8 p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800">
-<h2 class="text-3xl font-black text-slate-900 dark:text-white">Kenapa bisnis Anda belum digital?</h2>
-<ul class="space-y-6">
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error-red">cancel</span>
-<p class="text-slate-600 dark:text-slate-400">Bingung mulai dari mana karena terlalu banyak istilah teknis yang rumit.</p>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error-red">cancel</span>
-<p class="text-slate-600 dark:text-slate-400">Takut biaya digitalisasi yang mahal dan tidak terjangkau kantong UMKM.</p>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error-red">cancel</span>
-<p class="text-slate-600 dark:text-slate-400">Tidak punya waktu untuk belajar sendiri di tengah kesibukan operasional.</p>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-error-red">cancel</span>
-<p class="text-slate-600 dark:text-slate-400">Merasa bisnis konvensional sudah cukup, meski omzet mulai melambat.</p>
-</li>
-</ul>
-</div>
-<!-- Solution -->
-<div class="space-y-8 p-8 bg-primary/5 dark:bg-primary/10 rounded-3xl border-2 border-primary/20">
-<h2 class="text-3xl font-black text-primary">Kami punya solusinya</h2>
-<ul class="space-y-6">
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-success-green">check_circle</span>
-<div>
-<p class="font-bold text-slate-900 dark:text-white">Langkah demi langkah</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Panduan bertahap yang sangat mudah diikuti oleh siapapun.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-success-green">check_circle</span>
-<div>
-<p class="font-bold text-slate-900 dark:text-white">Komunitas supportif</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Tanya jawab langsung dengan mentor dan sesama pengusaha.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-success-green">check_circle</span>
-<div>
-<p class="font-bold text-slate-900 dark:text-white">Ebook praktis</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Materi yang padat, langsung praktik, tanpa teori bertele-tele.</p>
-</div>
-</li>
-<li class="flex gap-4 items-start">
-<span class="material-symbols-outlined text-success-green">check_circle</span>
-<div>
-<p class="font-bold text-slate-900 dark:text-white">Integrasi NotaKu</p>
-<p class="text-slate-600 dark:text-slate-400 text-sm">Gunakan alat manajemen bisnis modern yang sudah siap pakai.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- Ebook Showcase -->
-<section class="py-24 bg-white dark:bg-slate-900" id="ebook">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16 space-y-4">
-<h2 class="text-4xl font-black text-slate-900 dark:text-white">Koleksi Ebook Pilihan</h2>
-<p class="text-slate-500 max-w-2xl mx-auto">Dapatkan materi berkualitas yang sudah teruji untuk membantu akselerasi bisnis Anda.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Featured Ebook -->
-<div class="md:col-span-1 space-y-6 p-1 rounded-3xl bg-gradient-to-br from-primary to-accent-amber">
-<div class="bg-white dark:bg-slate-900 h-full rounded-[1.4rem] p-8 space-y-6">
-<div class="aspect-[3/4] bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden shadow-inner">
-<img class="w-full h-full object-cover" data-alt="Cover of the featured ebook titled Dari Nggak Ada Pilihan Jadi Punya Pilihan" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi37UVZmODoGCdifAVozX4r8r-zItUgeKH2d0oRfVTsTOTRMyS2JxolQecdFKEVzYoAcKFboUEfdHXSD94YwSqQ0u4RWMols36zdvmdUKm4KQoIaT1xwXpGGqa8ENBmhN20ZlkaidVRBi25oQ2gRTgu2SZZAnbOIYAAlAnq8TdDaJhHAgubG2J92CTVKD6TMtFO3bo4rg30mmHE7jRC-0Dim162pbRmJIfkagM-iLfiHEkHM3K_JYeqLOmgRIDp58ggrNyhU4t_MM"/>
-</div>
-<div class="space-y-3">
-<span class="px-2 py-1 bg-accent-amber/10 text-accent-amber text-[10px] font-black uppercase rounded">Featured</span>
-<h3 class="text-xl font-black">Dari Nggak Ada Pilihan Jadi Punya Pilihan</h3>
-<p class="text-slate-500 text-sm">Kisah sukses mendigitalkan bisnis dari nol hingga skala nasional.</p>
-</div>
-<button class="w-full py-3 bg-primary text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">Beli Ebook</button>
-</div>
-</div>
-<!-- Ebook 2 -->
-<div class="bg-background-light dark:bg-slate-800 p-8 rounded-3xl space-y-6">
-<div class="aspect-[3/4] bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden shadow-sm">
-<img class="w-full h-full object-cover" data-alt="Cover of an ebook about digital marketing for SMEs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-V4T26P8OK097EZQEMvXzigXgoXHy2e4gSCj7IVuwIP8MHRC0puA1YP90QQ_uLChndtv8kq8MxWc8PLzfsp0I_MRloGDkwBEVL5F7fA8tC9oalxm5y1OyGffy4eOXuwmyNBOrVFZrMJp6dvTyhoP0lfKYSU7plWX-fNsAY0TwLxuYENRa-yLCjkysG5jDOpEeWQsQTK_tFsBxfvBZIlG5YkNbVxEAyHm4BEUXRtqxRRzabKPzk_VNctjGz2RI5VQwKDNj4PjfSgQ"/>
-</div>
-<div class="space-y-3">
-<h3 class="text-xl font-black">Marketing Digital Sederhana</h3>
-<p class="text-slate-500 text-sm">Cara promosi di sosmed tanpa harus bayar iklan mahal.</p>
-</div>
-<button class="w-full py-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white font-bold rounded-lg hover:bg-slate-50 transition-colors">Beli Ebook</button>
-</div>
-<!-- Ebook 3 -->
-<div class="bg-background-light dark:bg-slate-800 p-8 rounded-3xl space-y-6">
-<div class="aspect-[3/4] bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden shadow-sm">
-<img class="w-full h-full object-cover" data-alt="Cover of an ebook about SME financial management" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_1YXIlvg8KX32wdSbuiLW7V_SWjlLuMTjptE99TqBAgYLa6FlGvw4w1LncBf_xh15OAj-OreK2aJf-zXk028d3tG_W0HnDBhXBiqi4PRqhZqtVQX8fTgNwnkCiAUHA3GoDPWVUG7QNij-3dSjS0aaRs9hz925h4ybX1-k1OsxtOSvT0zo2zWgyI6FQoi1sJAUJyK_hUyoKOEj_ZIBBNAeoWnI12JhVDC9jiUTgZ26N8yfTJ_P0cM-7maujklKe7iSytscU-1km8g"/>
-</div>
-<div class="space-y-3">
-<h3 class="text-xl font-black">Manajemen Keuangan UMKM</h3>
-<p class="text-slate-500 text-sm">Mengatur arus kas agar bisnis tetap sehat dan berkembang.</p>
-</div>
-<button class="w-full py-3 bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-900 dark:text-white font-bold rounded-lg hover:bg-slate-50 transition-colors">Beli Ebook</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Community & Membership -->
-<section class="py-24 bg-background-light dark:bg-background-dark" id="komunitas">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid lg:grid-cols-3 gap-8">
-<div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
-<div class="p-8 bg-white dark:bg-slate-900 rounded-3xl space-y-4 border border-slate-200 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-4xl">forum</span>
-<h3 class="text-2xl font-black">Forum Diskusi</h3>
-<p class="text-slate-500">Tempat bertanya segala hal tentang operasional dan teknologi bisnis Anda.</p>
-</div>
-<div class="p-8 bg-white dark:bg-slate-900 rounded-3xl space-y-4 border border-slate-200 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-4xl">inventory_2</span>
-<h3 class="text-2xl font-black">Materi Eksklusif</h3>
-<p class="text-slate-500">Akses ke webinar dan dokumen internal yang tidak dibagikan di publik.</p>
-</div>
-<div class="p-8 bg-white dark:bg-slate-900 rounded-3xl space-y-4 border border-slate-200 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-4xl">hub</span>
-<h3 class="text-2xl font-black">Networking</h3>
-<p class="text-slate-500">Bangun koneksi dengan ratusan pengusaha dari berbagai kota di Indonesia.</p>
-</div>
-<div class="p-8 bg-white dark:bg-slate-900 rounded-3xl space-y-4 border border-slate-200 dark:border-slate-800">
-<span class="material-symbols-outlined text-primary text-4xl">card_membership</span>
-<h3 class="text-2xl font-black">Mentoring</h3>
-<p class="text-slate-500">Sesi tanya jawab langsung dengan praktisi yang sudah berpengalaman.</p>
-</div>
-</div>
-<!-- Membership Card -->
-<div class="bg-primary p-8 rounded-3xl text-white space-y-8 flex flex-col justify-between shadow-2xl shadow-primary/30">
-<div>
-<h3 class="text-3xl font-black">Daftar Membership</h3>
-<p class="text-white/80 mt-2">Pilih paket yang sesuai dengan kebutuhan pertumbuhan bisnis Anda.</p>
-</div>
-<div class="space-y-4">
-<div class="flex justify-between items-center py-4 border-b border-white/20">
-<div>
-<p class="font-bold">Gratis</p>
-<p class="text-xs text-white/70">Akses Forum Dasar</p>
-</div>
-<p class="text-xl font-black">Rp 0</p>
-</div>
-<div class="flex justify-between items-center py-4">
-<div>
-<p class="font-bold">Premium</p>
-<p class="text-xs text-white/70">Full Access + Mentoring</p>
-</div>
-<p class="text-xl font-black">Rp 149rb<span class="text-xs font-normal">/bln</span></p>
-</div>
-</div>
-<button class="w-full py-4 bg-white text-primary font-black rounded-xl hover:scale-105 transition-transform">Pilih Paket</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Founder Story -->
-<section class="py-24 bg-white dark:bg-slate-900" id="tentang">
-<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="space-y-12 text-center lg:text-left">
-<div class="flex flex-col lg:flex-row gap-12 items-center">
-<div class="w-48 h-48 flex-shrink-0 bg-accent-amber rounded-full overflow-hidden border-4 border-white shadow-xl">
-<img class="w-full h-full object-cover" data-alt="Illustrated portrait of Ari, Konsultan IT PT Bakpia Kurnia Sari" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9X7_5gsVZOtLwdm-WFzo6x97OR2VQA_wrnLyjvywyViRH-7Pj7LHr2DnNXX-1xwILp_gQl6NRjwpxoJ48eeueLQcKkvztZUZLPfxxA-WyD7Ohos9UAXTVsObqQRIyOqKmL5KmVCFwR-e-h9zxfObcm7oUxJaQ_cf9Ozb1YrunUiw1Bw3OFIyVZKibe2O2ln2UdTDReYQe3pahpfZsu4CrIIt2FeqFuXx3TTeo9Pq1eKqW4S3I-d4BMTR1UrqMc7nHm1RxQL_IkxI"/>
-</div>
-<div class="space-y-6">
-<h2 class="text-3xl font-black italic">"Halo, saya Ari..."</h2>
-<div class="prose prose-lg dark:prose-invert text-slate-600 dark:text-slate-400 leading-relaxed italic">
-<p>Sebagai konsultan IT PT Bakpia Kurnia Sari, saya pernah merasakan betapa bingungnya saat harus berhadapan dengan dunia digital. Dulu, saya pikir jualan lewat WhatsApp saja sudah cukup.</p>
-<p>Ternyata, dunia berubah cepat. Saya mulai belajar, mencoba, dan akhirnya menemukan pola yang pas untuk UMKM seperti kita. JogjaBootcamp adalah tempat saya berbagi semua pembelajaran itu agar teman-teman tidak perlu mengulang kesalahan yang sama.</p>
-<p>Di sini, kita tidak bicara teori kampus yang sulit. Kita bicara tentang bagaimana jualan makin laris dan manajemen makin rapi menggunakan teknologi yang ada.</p>
-</div>
-<p class="font-black text-slate-900 dark:text-white">— Ari, Founder JogjaBootcamp &amp; Konsultan IT PT Bakpia Kurnia Sari</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Ecosystem -->
-<section class="py-24 bg-background-light dark:bg-background-dark border-y border-slate-200 dark:border-slate-800">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-black mb-4">Ekosistem Pendukung</h2>
-<p class="text-slate-500">Kami terintegrasi dengan alat yang memudahkan operasional bisnis Anda.</p>
-</div>
-<div class="grid md:grid-cols-2 gap-8">
-<div class="p-10 bg-white dark:bg-slate-900 rounded-3xl flex items-center gap-8 border border-slate-200 dark:border-slate-800 group hover:border-primary transition-colors cursor-pointer">
-<div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl">description</span>
-</div>
-<div>
-<h3 class="text-2xl font-black group-hover:text-primary transition-colors">NotaKu</h3>
-<p class="text-slate-500 mt-1">Aplikasi pencatatan transaksi dan stok barang modern.</p>
-</div>
-</div>
-<div class="p-10 bg-white dark:bg-slate-900 rounded-3xl flex items-center gap-8 border border-slate-200 dark:border-slate-800 group hover:border-accent-amber transition-colors cursor-pointer">
-<div class="w-20 h-20 bg-accent-amber/10 rounded-2xl flex items-center justify-center">
-<span class="material-symbols-outlined text-accent-amber text-4xl">psychology</span>
-</div>
-<div>
-<h3 class="text-2xl font-black group-hover:text-accent-amber transition-colors">MiniAIsland</h3>
-<p class="text-slate-500 mt-1">Implementasi kecerdasan buatan untuk otomatisasi UMKM.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="py-24 bg-white dark:bg-slate-900">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-3xl font-black text-center mb-16">Apa Kata Rekan UMKM?</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<div class="p-8 bg-background-light dark:bg-slate-800 rounded-3xl space-y-6">
-<div class="flex gap-1 text-accent-amber">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="italic text-slate-600 dark:text-slate-400">"Sangat membantu untuk saya yang gaptek. Materinya daging semua dan gampang dipraktikkan langsung di toko saya."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-slate-300">
-<img class="w-full h-full object-cover rounded-full" data-alt="Avatar of an SME owner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhc2kUdTcoJBaGKmJ4YX5ROT4eVAR0oJK_hvkuWM568sl8ygWB9Sc1DoPkSFvxRFlPWdQFuezvFw_2s_yIJcce6WsI79YdVLicBi7n4czBLzq4YqwaTdYXPfQxQ2If1l-uTvYr61P1Xybpt5MMlFgqypmvfvaIAsfHFNZUSTGalButC1xuaCCJk9qi8TjjlUZtTYObJAouBNYLbNdeOAbCyq7Z6gXBEf8BC12iUNPCc-jrlOMFOZWC2UDhdupvG_fhVnJVoHKlKb8"/>
-</div>
-<div>
-<p class="font-bold">Bude Sari</p>
-<p class="text-xs text-slate-500">Pemilik Warung Makan</p>
-</div>
-</div>
-</div>
-<div class="p-8 bg-background-light dark:bg-slate-800 rounded-3xl space-y-6">
-<div class="flex gap-1 text-accent-amber">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="italic text-slate-600 dark:text-slate-400">"Komunitasnya asik banget. Kalau ada kendala di sistem kasir atau promo sosmed, tinggal tanya di forum langsung dijawab."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-slate-300">
-<img class="w-full h-full object-cover rounded-full" data-alt="Avatar of an SME owner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATN6x7NScN5bYqIjcFObdRK6fI3gQrnsyhf4W88dwg1mHo7TE4kapYPiBh9CJPgZRSQSdL896qRdjSXxxCk4RdXRMCO7hba2tbvmHCw1nPl2-FjEpDqBsKUW6zG_XWo4x5XazTvOo4VZpm8vZ7ZIdWlM3NZMLDlmEOxS0R2YM3HLuncjS165o9_YxHMH-4zNvG8bWJuPLQBEHHbU7d1YuJduHaBVvg69rz5WhruPP27eEBf7HgmH4eblIwrLq42okEkV4eWLrDjtA"/>
-</div>
-<div>
-<p class="font-bold">Mas Danu</p>
-<p class="text-xs text-slate-500">Coffee Shop Jogja</p>
-</div>
-</div>
-</div>
-<div class="p-8 bg-background-light dark:bg-slate-800 rounded-3xl space-y-6">
-<div class="flex gap-1 text-accent-amber">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="italic text-slate-600 dark:text-slate-400">"Ebook-nya Ari bener-bener ngerubah mindset saya tentang jualan online. Sekarang stok barang jauh lebih rapi."</p>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-slate-300">
-<img class="w-full h-full object-cover rounded-full" data-alt="Avatar of an SME owner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkpnoBOowL9Rlhs3Q1ipgAWIuptO5ScJGjRHpKVsvGI5LKbGkNP6BB0gzUDOuZOnJyJNmaPmNdry5i__UNQkqoWeaooz3ggDP0Ibqh7ZUzD2T7KXUEUxddTrrIWx02hCKukG-NaRVnOd6EdZxGCPywnNvcCF8RkZo8navLdq3T877-mp3Y7LxpQYoZI7152t8Ji5DsKBrejuOP4GNsj1Sx88lqdDxZ8yfMEHAeGiVu1Q7sN9M-_1cnqrAFlHATq5n38CX0P20u1Zc"/>
-</div>
-<div>
-<p class="font-bold">Mbak Nina</p>
-<p class="text-xs text-slate-500">Fashion Boutique</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section class="py-24 bg-background-light dark:bg-background-dark">
-<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-<h2 class="text-3xl font-black text-center mb-12">Pertanyaan Umum</h2>
-<div class="space-y-4">
-<details class="group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800" open="">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-bold text-lg">Apakah benar-benar gratis?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-500 leading-relaxed">
-                        Ya, pendaftaran dasar dan akses ke komunitas awal 100% gratis. Kami percaya ilmu dasar digitalisasi harus bisa diakses semua orang.
-                    </div>
-</details>
-<details class="group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-bold text-lg">Bagaimana cara mendapatkan Ebook?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-500 leading-relaxed">
-                        Anda bisa membeli ebook secara satuan melalui katalog kami atau berlangganan membership Premium untuk akses ke seluruh koleksi.
-                    </div>
-</details>
-<details class="group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-bold text-lg">Apakah ada bimbingan langsung?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-500 leading-relaxed">
-                        Tentu, kami mengadakan sesi webinar dan tanya jawab rutin khusus untuk member Premium setiap dua minggu sekali.
-                    </div>
-</details>
-<details class="group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-bold text-lg">Apa bedanya JogjaBootcamp dengan kursus lain?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-500 leading-relaxed">
-                        Kami fokus pada praktik nyata UMKM Indonesia. Kurikulum kami disusun oleh praktisi bisnis yang masih aktif berjualan, bukan hanya sekadar teori akademis.
-                    </div>
-</details>
-<details class="group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800">
-<summary class="flex justify-between items-center p-6 cursor-pointer list-none">
-<span class="font-bold text-lg">Apakah bisa diakses dari luar Jogja?</span>
-<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
-</summary>
-<div class="px-6 pb-6 text-slate-500 leading-relaxed">
-                        Tentu saja! Meski berpusat di Jogja, komunitas kami terbuka untuk seluruh pemilik UMKM di Indonesia secara online.
-                    </div>
-</details>
-</div>
-</div>
-</section>
-<!-- Final CTA -->
-<section class="py-24 px-4 sm:px-6 lg:px-8">
-<div class="max-w-5xl mx-auto bg-gradient-to-br from-primary to-blue-900 rounded-[2rem] p-12 lg:p-20 text-center space-y-10 shadow-2xl relative overflow-hidden">
-<div class="absolute top-0 right-0 w-64 h-64 bg-accent-amber/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
-<h2 class="text-4xl lg:text-6xl font-black text-white leading-tight relative">Siap mulai perjalanan digital Anda?</h2>
-<p class="text-xl text-white/80 max-w-2xl mx-auto relative">Jangan tunda lagi. Ribuan rekan UMKM sudah bergerak, sekarang giliran Anda.</p>
-<div class="flex flex-col sm:flex-row justify-center gap-4 relative">
-<a href="/quiz/" class="bg-accent-amber text-white px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-transform shadow-xl inline-block">
-                    Daftar Sekarang — Gratis
-                </a>
-<a href="https://wa.me/{{WHATSAPP_NUMBER}}?text=Halo%20JogjaBootcamp!%20Saya%20mau%20tanya%20tentang%20komunitas%20dan%20kelasnya." target="_blank" rel="noopener noreferrer" class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-black text-xl hover:bg-white/20 transition-colors inline-block">
-                    Tanya via WhatsApp
-                </a>
-</div>
-</div>
-</section>
+
+<main id="konten">
+
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <div class="hero__content">
+        <p class="eyebrow eyebrow--rule">PENDIDIKAN DIGITAL UNTUK UMKM</p>
+        <h1 id="hero-title">Panduan praktis digitalisasi usaha, dari praktisi yang masih berjualan.</h1>
+        <p class="hero__lead">Ebook ringkas, webinar rutin, dan mentoring untuk pemilik UMKM yang ingin penjualan lebih lancar dan pembukuan lebih rapi.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="#harga">Lihat Paket Premium</a>
+          <a class="btn btn--outline btn--lg" href="#ebook">Jelajahi Ebook</a>
+        </div>
+        <p class="hero__note">Mulai Rp 149rb per bulan · Berhenti kapan saja</p>
+      </div>
+      <div class="hero__media">
+        <!-- TODO: ganti dengan foto asli "Ari mendampingi pemilik UMKM", lalu sesuaikan alt, sizes, dan object-position -->
+        <picture>
+          <source type="image/avif" srcset="/images/hero-640.avif 640w, /images/hero-960.avif 960w, /images/hero-1280.avif 1280w, /images/hero-1920.avif 1920w" sizes="(min-width: 1440px) 976px, (min-width: 1024px) 78vw, (max-width: 599px) 540px, calc(100vw - 48px)">
+          <source type="image/webp" srcset="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero-1280.webp 1280w, /images/hero-1920.webp 1920w" sizes="(min-width: 1440px) 976px, (min-width: 1024px) 78vw, (max-width: 599px) 540px, calc(100vw - 48px)">
+          <img src="/images/hero-1280.jpg" width="1280" height="714" fetchpriority="high" alt="Para pelaku UMKM belajar bersama dengan laptop dan tablet di ruang kelas">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistik -->
+  <section class="stats-section" aria-label="JogjaBootcamp dalam angka">
+    <div class="container">
+      <ul class="stats">
+        <li class="stat"><span class="stat__value">500+</span> <span class="stat__label">Anggota komunitas</span></li>
+        <li class="stat"><span class="stat__value">12</span> <span class="stat__label">Ebook praktis</span></li>
+        <li class="stat"><span class="stat__value">10</span> <span class="stat__label">Kota</span></li>
+        <li class="stat"><span class="stat__value">2023</span> <span class="stat__label">Berdiri sejak</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mengapa JogjaBootcamp -->
+  <section class="why" aria-labelledby="why-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">MENGAPA JOGJABOOTCAMP</p>
+        <h2 id="why-title">Dari bingung menjadi paham, langkah demi langkah.</h2>
+      </div>
+      <div class="why__lists">
+        <div>
+          <h3 class="why__title why__title--muted">Tantangan yang sering muncul</h3>
+          <ul class="rule-list">
+            <li>Istilah teknis yang membingungkan</li>
+            <li>Khawatir biaya digitalisasi mahal</li>
+            <li>Tidak sempat belajar di tengah kesibukan</li>
+            <li>Omzet melambat tanpa arah yang jelas</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="why__title">Yang kami tawarkan</h3>
+          <ul class="rule-list rule-list--check">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Panduan bertahap yang mudah diikuti</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Ebook ringkas yang langsung dipraktikkan</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Diskusi langsung dengan mentor</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Biaya terjangkau, mulai dari gratis</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Katalog ebook -->
+  <section class="ebooks" id="ebook" aria-labelledby="ebook-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">KATALOG EBOOK</p>
+        <h2 id="ebook-title">Ebook pilihan</h2>
+      </div>
+      <div class="ebook-grid">
+        <article class="ebook">
+          <!-- TODO: ganti dengan gambar cover ebook -->
+          <div class="placeholder ebook__cover">[Cover ebook]</div>
+          <div class="ebook__body">
+            <p class="ebook__category">STUDI KASUS · TERLARIS</p>
+            <h3 class="ebook__title">Dari Nggak Ada Pilihan Jadi Punya Pilihan</h3>
+            <p class="ebook__desc">Perjalanan mendigitalkan bisnis dari nol hingga skala nasional.</p>
+          </div>
+          <div class="ebook__footer">
+            <!-- TODO: isi harga ebook -->
+            <p class="ebook__price">[HARGA]</p>
+            <!-- TODO: link beli ebook -->
+            <a class="btn btn--outline" href="#">Beli Ebook<span class="sr-only"> Dari Nggak Ada Pilihan Jadi Punya Pilihan</span></a>
+          </div>
+        </article>
+        <article class="ebook">
+          <!-- TODO: ganti dengan gambar cover ebook -->
+          <div class="placeholder ebook__cover">[Cover ebook]</div>
+          <div class="ebook__body">
+            <p class="ebook__category">PEMASARAN</p>
+            <h3 class="ebook__title">Marketing Digital Sederhana</h3>
+            <p class="ebook__desc">Cara promosi di media sosial tanpa biaya iklan besar.</p>
+          </div>
+          <div class="ebook__footer">
+            <!-- TODO: isi harga ebook -->
+            <p class="ebook__price">[HARGA]</p>
+            <!-- TODO: link beli ebook -->
+            <a class="btn btn--outline" href="#">Beli Ebook<span class="sr-only"> Marketing Digital Sederhana</span></a>
+          </div>
+        </article>
+        <article class="ebook">
+          <!-- TODO: ganti dengan gambar cover ebook -->
+          <div class="placeholder ebook__cover">[Cover ebook]</div>
+          <div class="ebook__body">
+            <p class="ebook__category">KEUANGAN</p>
+            <h3 class="ebook__title">Manajemen Keuangan UMKM</h3>
+            <p class="ebook__desc">Mengatur arus kas agar usaha tetap sehat dan bertumbuh.</p>
+          </div>
+          <div class="ebook__footer">
+            <!-- TODO: isi harga ebook -->
+            <p class="ebook__price">[HARGA]</p>
+            <!-- TODO: link beli ebook -->
+            <a class="btn btn--outline" href="#">Beli Ebook<span class="sr-only"> Manajemen Keuangan UMKM</span></a>
+          </div>
+        </article>
+      </div>
+      <!-- TODO: link halaman semua ebook -->
+      <a class="ebooks__all" href="#">Lihat semua 12 ebook</a>
+    </div>
+  </section>
+
+  <!-- Harga -->
+  <section class="pricing" id="harga" aria-labelledby="harga-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">PAKET</p>
+        <h2 id="harga-title">Pilih cara belajar Anda</h2>
+        <!-- TODO: isi total harga seluruh 12 ebook -->
+        <p class="section-lead">Seluruh 12 ebook dibeli satuan: [TOTAL HARGA]. Dengan Premium: Rp 149rb per bulan.</p>
+      </div>
+      <div class="plans">
+        <article class="plan plan--free">
+          <div class="plan__head">
+            <h3 class="plan__name">Gratis</h3>
+            <p class="plan__desc">Untuk mulai mengenal komunitas</p>
+          </div>
+          <p class="plan__price">Rp 0</p>
+          <ul class="plan__features">
+            <li>Forum diskusi dasar</li>
+            <li>Info webinar terbuka</li>
+            <li class="is-excluded">Ebook tidak termasuk</li>
+            <li class="is-excluded">Tanpa mentoring</li>
+          </ul>
+          <a class="btn btn--outline btn--md" href="/quiz/">Daftar Gratis</a>
+        </article>
+        <article class="plan plan--single">
+          <div class="plan__head">
+            <h3 class="plan__name">Ebook Satuan</h3>
+            <p class="plan__desc">Pilih topik yang Anda butuhkan</p>
+          </div>
+          <!-- TODO: isi harga ebook satuan -->
+          <p class="plan__price">[HARGA]</p>
+          <ul class="plan__features">
+            <li>Milik Anda selamanya</li>
+            <li>Akses forum dasar</li>
+            <li>Pembaruan isi ebook</li>
+            <li class="is-excluded">Tanpa mentoring</li>
+          </ul>
+          <a class="btn btn--outline btn--md" href="#ebook">Pilih Ebook</a>
+        </article>
+        <article class="plan plan--premium">
+          <div class="plan__head">
+            <div class="plan__title-row">
+              <h3 class="plan__name">Premium</h3>
+              <span class="badge">PALING HEMAT</span>
+            </div>
+            <p class="plan__desc">Akses penuh dan pendampingan</p>
+          </div>
+          <p class="plan__price">Rp 149rb<span class="plan__unit"> / bulan</span></p>
+          <ul class="plan__features">
+            <li>Seluruh 12 ebook dan rilis baru</li>
+            <li>Webinar setiap dua minggu</li>
+            <li>Mentoring dan tanya jawab langsung</li>
+            <li>Materi eksklusif dan networking</li>
+          </ul>
+          <!-- TODO: link checkout Premium -->
+          <a class="btn btn--light btn--md" href="#">Gabung Premium</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Isi Premium -->
+  <section class="benefits-section" id="premium" aria-labelledby="premium-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">MEMBER PREMIUM</p>
+        <h2 id="premium-title">Lebih dari sekadar ebook</h2>
+      </div>
+      <ol class="benefits">
+        <li class="benefit">
+          <span class="benefit__num">01</span>
+          <div class="benefit__body">
+            <h3 class="benefit__title">Forum diskusi</h3>
+            <p class="benefit__desc">Pertanyaan operasional dan teknologi dijawab mentor dan sesama pengusaha.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">02</span>
+          <div class="benefit__body">
+            <h3 class="benefit__title">Materi eksklusif</h3>
+            <p class="benefit__desc">Rekaman webinar dan dokumen yang tidak dibagikan ke publik.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">03</span>
+          <div class="benefit__body">
+            <h3 class="benefit__title">Networking</h3>
+            <p class="benefit__desc">Terhubung dengan pengusaha dari berbagai kota di Indonesia.</p>
+          </div>
+        </li>
+        <li class="benefit">
+          <span class="benefit__num">04</span>
+          <div class="benefit__body">
+            <h3 class="benefit__title">Mentoring &amp; webinar</h3>
+            <p class="benefit__desc">Sesi tanya jawab langsung dengan praktisi setiap dua minggu.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Tentang pendiri -->
+  <section class="founder" id="tentang" aria-labelledby="founder-title">
+    <div class="container">
+      <!-- TODO: ganti dengan foto asli Ari -->
+      <div class="placeholder founder__photo">[Foto asli Ari]</div>
+      <div class="founder__content">
+        <p class="eyebrow">TENTANG PENDIRI</p>
+        <h2 class="founder__quote" id="founder-title">"Di sini kita tidak bicara teori kampus, tapi cara jualan makin laris dan pembukuan makin rapi."</h2>
+        <p class="founder__bio">Sebagai konsultan IT PT Bakpia Kurnia Sari, Ari pernah merasakan sulitnya beradaptasi dengan dunia digital. Pola yang berhasil untuk UMKM ia rangkum di JogjaBootcamp agar pemilik usaha lain tidak perlu mengulang kesalahan yang sama.</p>
+        <p class="founder__person"><span class="founder__name">Ari Wibowo</span> <span class="founder__role">Pendiri JogjaBootcamp</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni -->
+  <section class="testimonials" id="testimoni" aria-labelledby="testimoni-title">
+    <div class="container">
+      <h2 id="testimoni-title">Kata rekan UMKM</h2>
+      <div class="testimonial-grid">
+        <figure class="testimonial">
+          <blockquote>"Sangat membantu untuk saya yang gaptek. Materinya mudah dipraktikkan langsung di toko."</blockquote>
+          <figcaption>
+            <!-- TODO: ganti dengan foto Bude Sari -->
+            <span class="avatar">[foto]</span>
+            <span><span class="testimonial__name">Bude Sari</span> <span class="testimonial__role">Pemilik Warung Makan</span></span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>"Kalau ada kendala di sistem kasir atau promosi, tinggal tanya di forum dan langsung dijawab."</blockquote>
+          <figcaption>
+            <!-- TODO: ganti dengan foto Mas Danu -->
+            <span class="avatar">[foto]</span>
+            <span><span class="testimonial__name">Mas Danu</span> <span class="testimonial__role">Coffee Shop, Jogja</span></span>
+          </figcaption>
+        </figure>
+        <figure class="testimonial">
+          <blockquote>"Ebooknya mengubah cara saya berjualan online. Sekarang stok barang jauh lebih rapi."</blockquote>
+          <figcaption>
+            <!-- TODO: ganti dengan foto Mbak Nina -->
+            <span class="avatar">[foto]</span>
+            <span><span class="testimonial__name">Mbak Nina</span> <span class="testimonial__role">Fashion Boutique</span></span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Pertanyaan yang sering diajukan</h2>
+      </div>
+      <div class="faq__list">
+        <details class="faq-item">
+          <summary>
+            <span>Bagaimana cara membayar?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <!-- TODO: isi metode pembayaran -->
+          <p class="faq-item__answer">[Metode pembayaran: transfer bank, e-wallet, QRIS, dll.]</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>Setelah membeli, bagaimana cara mengakses ebook?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <!-- TODO: isi cara akses ebook -->
+          <p class="faq-item__answer">[Cara akses: tautan unduhan via email atau halaman member]</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>Bagaimana cara berhenti berlangganan Premium?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <!-- TODO: isi cara berhenti berlangganan -->
+          <p class="faq-item__answer">[Cara berhenti berlangganan]</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>Apakah ada bimbingan langsung?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="faq-item__answer">Ada. Member Premium mendapat webinar dan sesi tanya jawab setiap dua minggu.</p>
+        </details>
+        <details class="faq-item">
+          <summary>
+            <span>Apakah bisa diikuti dari luar Jogja?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <p class="faq-item__answer">Bisa. Seluruh kegiatan berlangsung online dan terbuka untuk UMKM di seluruh Indonesia.</p>
+        </details>
+      </div>
+      <p class="faq__note">Belum menemukan jawabannya? <a class="text-link" href="https://wa.me/{{WHATSAPP_NUMBER}}" target="_blank" rel="noopener noreferrer">Hubungi kami via WhatsApp</a>.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="cta__box">
+        <div class="cta__text">
+          <h2 id="cta-title">Mulai perjalanan digital usaha Anda.</h2>
+          <p>Bergabung bersama 500+ pemilik UMKM yang sudah belajar bersama.</p>
+        </div>
+        <div class="cta__actions">
+          <a class="btn btn--outline-light btn--lg" href="https://wa.me/{{WHATSAPP_NUMBER}}" target="_blank" rel="noopener noreferrer">Tanya via WhatsApp</a>
+          <a class="btn btn--light btn--lg" href="#harga">Gabung Premium</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
 <!-- Footer -->
-<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-10">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-4 gap-12 mb-16">
-<div class="col-span-1 md:col-span-1 space-y-6">
-<div class="flex items-center">
-<img src="https://image.jogjabootcamp.com/Logo/Logo-Symbol%20%26%20Typography.png" alt="JogjaBootcamp" class="h-8"/>
-</div>
-<p class="text-slate-500 text-sm">Empowering Indonesian SMEs through digital transformation and practical education.</p>
-<div class="flex gap-4">
-<a class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">public</span>
-</a>
-<a class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">share</span>
-</a>
-<a class="w-10 h-10 bg-slate-100 dark:bg-slate-800 rounded-full flex items-center justify-center text-slate-600 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">mail</span>
-</a>
-</div>
-</div>
-<div class="space-y-6">
-<h4 class="font-black uppercase text-xs tracking-widest text-slate-400">Navigasi</h4>
-<ul class="space-y-4 text-sm font-semibold">
-<li><a class="hover:text-primary" href="#">Komunitas</a></li>
-<li><a class="hover:text-primary" href="#">Ebook</a></li>
-<li><a class="hover:text-primary" href="#">Webinar</a></li>
-<li><a class="hover:text-primary" href="#">Blog</a></li>
-</ul>
-</div>
-<div class="space-y-6">
-<h4 class="font-black uppercase text-xs tracking-widest text-slate-400">Dukungan</h4>
-<ul class="space-y-4 text-sm font-semibold">
-<li><a class="hover:text-primary" href="#">FAQ</a></li>
-<li><a class="hover:text-primary" href="#">Kontak Kami</a></li>
-<li><a class="hover:text-primary" href="#">Kebijakan Privasi</a></li>
-<li><a class="hover:text-primary" href="#">Syarat &amp; Ketentuan</a></li>
-</ul>
-</div>
-<div class="space-y-6">
-<h4 class="font-black uppercase text-xs tracking-widest text-slate-400">Partner Kami</h4>
-<div class="grid grid-cols-2 gap-4">
-<div class="h-12 bg-slate-50 dark:bg-slate-800 rounded flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-<span class="font-black text-slate-400">NotaKu</span>
-</div>
-<div class="h-12 bg-slate-50 dark:bg-slate-800 rounded flex items-center justify-center grayscale hover:grayscale-0 transition-all">
-<span class="font-black text-slate-400">MiniAI</span>
-</div>
-</div>
-</div>
-</div>
-<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
-<p>© 2024 JogjaBootcamp. All rights reserved.</p>
-<div class="flex gap-8">
-<a class="hover:text-slate-600" href="#">Built with Love in Jogja</a>
-</div>
-</div>
-</div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/logo-jogjabootcamp.png" alt="JogjaBootcamp" width="180" height="42">
+        <p>Pendidikan digital praktis untuk UMKM Indonesia.</p>
+      </div>
+      <nav class="footer-col" aria-labelledby="footer-belajar">
+        <h2 id="footer-belajar">Belajar</h2>
+        <ul>
+          <li><a href="#ebook">Ebook</a></li>
+          <li><a href="#premium">Premium</a></li>
+          <!-- TODO: link halaman Webinar -->
+          <li><a href="#">Webinar</a></li>
+          <!-- TODO: link Blog -->
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-col" aria-labelledby="footer-bantuan">
+        <h2 id="footer-bantuan">Bantuan</h2>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="https://wa.me/{{WHATSAPP_NUMBER}}" target="_blank" rel="noopener noreferrer">Kontak</a></li>
+          <!-- TODO: link Kebijakan Privasi -->
+          <li><a href="#">Kebijakan Privasi</a></li>
+          <!-- TODO: link Syarat & Ketentuan -->
+          <li><a href="#">Syarat &amp; Ketentuan</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h2>Ekosistem</h2>
+        <ul>
+          <li>NotaKu</li>
+          <li>MiniAIsland</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 JogjaBootcamp · Yogyakarta</p>
+      <!-- TODO: ganti dengan link WhatsApp, Instagram, dan Email -->
+      <p>[WhatsApp] · [Instagram] · [Email]</p>
+    </div>
+  </div>
 </footer>
-</body></html>
+
+<script>
+  (() => {
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('site-nav');
+    if (!toggle || !nav) return;
+
+    const setOpen = (open) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+    };
+
+    toggle.addEventListener('click', () => {
+      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
+    });
+
+    // Tutup menu setelah salah satu link diklik
+    nav.addEventListener('click', (event) => {
+      if (event.target.closest('a')) setOpen(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    // Menu desktop selalu tampil, jadi reset state saat layar melebar
+    window.matchMedia('(min-width: 1024px)').addEventListener('change', (event) => {
+      if (event.matches) setOpen(false);
+    });
+  })();
+</script>
+</body>
+</html>
